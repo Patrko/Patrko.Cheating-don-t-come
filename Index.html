@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>نسخ كود النموذج</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { 
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif; 
+      padding: 20px; 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .code-container {
+      background: #282c34;
+      border-radius: 8px;
+      padding: 20px;
+      position: relative;
+      margin-bottom: 20px;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+    .code-container::-webkit-scrollbar {
+      width: 8px;
+    }
+    .code-container::-webkit-scrollbar-track {
+      background: #1e2127;
+      border-radius: 4px;
+    }
+    .code-container::-webkit-scrollbar-thumb {
+      background: #4a4f5c;
+      border-radius: 4px;
+    }
+    pre {
+      margin: 0;
+      color: #abb2bf;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      direction: ltr;
+      text-align: left;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 10px 20px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    }
+    .copy-btn:hover {
+      background: #5568d3;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+    .copy-btn.copied {
+      background: #10b981;
+    }
+    .preview-section {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 2px solid #e5e7eb;
+    }
+    .preview-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .info-box {
+      background: #f0f9ff;
+      border-right: 4px solid #3b82f6;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+    .info-box h3 {
+      margin: 0 0 10px 0;
+      color: #1e40af;
+    }
+    .info-box ul {
+      margin: 10px 0;
+      padding-right: 20px;
+    }
+    .info-box li {
+      margin: 5px 0;
+      color: #334155;
+    }
+    fieldset { 
+      padding: 18px; 
+      background: #fafafa; 
+      border-radius: 6px; 
+      border: 1px solid #ddd; 
+    }
+    legend { 
+      font-weight: 700; 
+      padding: 0 10px;
+      color: #667eea;
+    }
+    label { 
+      display: block; 
+      margin: 10px 0 6px;
+      color: #374151;
+      font-weight: 500;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea { 
+      width: 100%; 
+      padding: 8px; 
+      border: 1px solid #ccc; 
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    .radios { 
+      display: flex; 
+      gap: 12px; 
+      align-items: center; 
+      margin: 6px 0 12px; 
+    }
+    input[type="submit"] { 
+      padding: 10px 24px; 
+      border: 0; 
+      border-radius: 6px; 
+      cursor: pointer;
+      background: #667eea;
+      color: white;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    input[type="submit"]:hover {
+      background: #5568d3;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Cheating Don't come</h1>
+    <p class="subtitle">انقر على زر "نسخ الكود" لنسخ الكود الكامل</p>
+
+    <div class="code-container">
+      <button class="copy-btn" onclick="copyCode()">📋 نسخ الكود</button>
+      <pre id="codeBlock"><!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>نموذج تسجيل</title>
+  <style>
+    body { font-family: "Segoe UI", Tahoma, Arial, sans-serif; padding:20px; background:#f7f7f7; }
+    fieldset { max-width:700px; margin:0 auto; padding:18px; background:#fff; border-radius:6px; border:1px solid #ddd; }
+    legend { font-weight:700; padding:0 6px; }
+    label { display:block; margin:10px 0 6px; }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea { width:100%; box-sizing:border-box; padding:8px; border:1px solid #ccc; border-radius:4px; }
+    .radios { display:flex; gap:12px; align-items:center; margin:6px 0 12px; }
+    input[type="submit"] { padding:8px 16px; border:0; border-radius:4px; cursor:pointer; }
+  </style>
+</head>
+<body>
+
+  <form action="Index.html" method="post">
+    <fieldset>
+      <legend>تسجيل</legend>
+
+      <label for="username">اسم المستخدم</label>
+      <input type="text" id="username" name="username" />
+
+      <label for="password">كلمة المرور</label>
+      <input type="password" id="password" name="password" />
+
+      <label for="email">البريد الإلكتروني</label>
+      <input type="email" id="email" name="email" />
+
+      <label>الجنس</label>
+      <div class="radios">
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">ذكر</label>
+
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">أنثى</label>
+      </div>
+
+      <label for="message">رسالتك</label>
+      <textarea id="message" name="message" placeholder="اكتب رسالتك هنا" cols="60" rows="10"></textarea>
+
+      <br /><br />
+      <input type="submit" value="تسجيل" />
+    </fieldset>
+  </form>
+
+</body>
+</html></pre>
+    </div>
+
+    <div class="preview-section">
+      <div class="preview-title">👁️ معاينة النموذج:</div>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>تسجيل</legend>
+
+          <label for="username">اسم المستخدم</label>
+          <input type="text" id="username" name="username" />
+
+          <label for="password">كلمة المرور</label>
+          <input type="password" id="password" name="password" />
+
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" id="email" name="email" />
+
+          <label>الجنس</label>
+          <div class="radios">
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">ذكر</label>
+
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">أنثى</label>
+          </div>
+
+          <label for="message">رسالتك</label>
+          <textarea id="message" name="message" placeholder="اكتب رسالتك هنا" cols="60" rows="10"></textarea>
+
+          <br /><br />
+          <input type="submit" value="تسجيل" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function copyCode() {
+      const codeBlock = document.getElementById('codeBlock');
+      const textArea = document.createElement('textarea');
+      textArea.value = codeBlock.textContent;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      
+      const btn = document.querySelector('.copy-btn');
+      btn.textContent = '✅ تم النسخ!';
+      btn.classList.add('copied');
+      
+      setTimeout(() => {
+        btn.textContent = '📋 نسخ الكود';
+        btn.classList.remove('copied');
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
